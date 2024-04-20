@@ -59,35 +59,3 @@ button:hover {
 #itineraryContent p {
     margin-bottom: 10px;
 }
-.attraction {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 1650px;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-.attraction-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.attraction-address {
-    font-style: italic;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.attraction-description {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.attraction-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
