@@ -78,10 +78,12 @@ button:hover {
 .attraction-address {
     font-style: italic;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .attraction-description {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .attraction-image {
