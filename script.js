@@ -1,5 +1,7 @@
 document.getElementById("travelForm").addEventListener("submit", function(event) {
     event.preventDefault();
+    document.getElementById("loading-message").classList.remove("hidden")
+
     const destination = document.getElementById("destination").value;
     fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${destination}&limit=30&offset=0&units=mi&location_id=1&currency=USD&sort=relevance&lang=en_US`, {
         "method": "GET",
@@ -20,7 +22,10 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             }
         });
     })
-    .then(response => response.json())
+    .then(response => {
+        document.getElementById("loading-message").classList.add("hidden");
+        return response.json();
+    })
     .then(data => {
         console.log(data)
         const attractions = data.data;
@@ -51,7 +56,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             attractionDiv.appendChild(addressElement)
             attractionDiv.appendChild(descriptionElement)
 
-            if (attractionPhotoURL) { // Check if attraction has a photo
+            if (attractionPhotoURL) { 
                 const imageElement = document.createElement("img");
                 imageElement.classList.add("attraction-image");
                 imageElement.src = attractionPhotoURL;
