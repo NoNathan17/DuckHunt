@@ -1,5 +1,7 @@
 document.getElementById("travelForm").addEventListener("submit", function(event) {
+    console.log("Request received")
     event.preventDefault();
+    document.getElementById("itinerary").classList.add("hidden")
     document.getElementById("itineraryContent").innerHTML = ""
     document.getElementById("loading-message").classList.remove("hidden")
 
@@ -10,9 +12,11 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             "X-RapidAPI-key": "f87fe54ac5msh3f62659484924a8p14a7e4jsnb2cc27d65afb",
             "X-RapidAPI-host": "travel-advisor.p.rapidapi.com"
         }
+        
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Destination Data fetched")
         console.log(data)
         const locationId = data.data[0].result_object.location_id;
         return fetch(`https://travel-advisor.p.rapidapi.com/attractions/list?location_id=${locationId}&currency=USD&lang=en_US&lunit=mi&limit=6&sort=reccomended`, {
@@ -28,10 +32,10 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
         return response.json();
     })
     .then(data => {
+        console.log("Attraction Data fetched")
         console.log(data)
-        const attractions = data.data;
+        const attractions = data.data.filter(item => item.name);
         const itineraryContent = document.getElementById("itineraryContent");
-        itineraryContent.innerHTML = "";
         attractions.forEach(attraction => {
             const attractionName = attraction.name;
             const attractionAddress = attraction.address;
