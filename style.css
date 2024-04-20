@@ -54,6 +54,7 @@ button:hover {
 
 #itineraryContent {
     margin-top: 20px;
+    margin: auto;
 }
 
 #itineraryContent p {
@@ -90,4 +91,8 @@ button:hover {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+#loading-message {
+    margin:auto;
 }
