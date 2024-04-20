@@ -1,7 +1,7 @@
 document.getElementById("travelForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const destination = document.getElementById("destination").value;
-    fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${destination}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`, {
+    fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${destination}&limit=30&offset=0&units=mi&location_id=1&currency=USD&sort=relevance&lang=en_US`, {
         "method": "GET",
         "headers": {
             "X-RapidAPI-key": "f87fe54ac5msh3f62659484924a8p14a7e4jsnb2cc27d65afb",
@@ -10,6 +10,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         const locationId = data.data[0].result_object.location_id;
         return fetch(`https://travel-advisor.p.rapidapi.com/attractions/list?location_id=${locationId}&currency=USD&lang=en_US&lunit=mi&limit=5&sort=reccomended`, {
             "method": "GET",
@@ -45,14 +46,21 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             const descriptionElement = document.createElement("p")
             descriptionElement.classList.add("attraction-description")
             descriptionElement.textContent = attractionDescription
-            
-            const imageElement = document.createElement("img")
-            imageElement.classList.add("attraction-image")
-            imageElement.src = attractionPhotoURL
 
             attractionDiv.appendChild(headerElement)
             attractionDiv.appendChild(addressElement)
             attractionDiv.appendChild(descriptionElement)
+
+            if (attractionPhotoURL) { // Check if attraction has a photo
+                const imageElement = document.createElement("img");
+                imageElement.classList.add("attraction-image");
+                imageElement.src = attractionPhotoURL;
+                attractionDiv.appendChild(imageElement);
+            } else {
+                const noImageElement = document.createElement("p");
+                noImageElement.textContent = "No image available";
+                attractionDiv.appendChild(noImageElement);
+            }
 
             itineraryContent.appendChild(attractionDiv)
         });
