@@ -5,19 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Advisor</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: cadetblue;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center horizontally */
+            text-align: center; /* Center text */
+            margin-top: 20px; /* Add margin to top */
+        }
+
+        .header-container img {
+            max-width: 100px;
+        }
+    </style>
 </head>
-<body style="background-color: cadetblue;">
-    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-        <h1 style="text-align: center; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Where Do You Want to Travel?</h1>
-        <form id="travelForm" style="text-align: center;">
-            <label for="destination">Enter Destination:</label>
-            <input type="text" id="destination" name="destination" required>
-            <button type="submit">Get Itinerary</button>
-        </form>
-        <div id="itinerary" class="hidden">
-            <h2 style="text-align: center; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Itinerary</h2>
-            <div id="itineraryContent"></div>
-        </div>
+<body>
+    <div class="header-container">
+        <img src="/Users/jisoo/Desktop/image.png" alt="left image of duck">
+        <h1>Where Do You Want to Travel?</h1>
+        <img src="/Users/jisoo/Desktop/Untitled33-removebg-preview.png" alt="right image of duck">
+    </div>
+    <form id="travelForm" style="text-align: center;">
+        <label for="destination">Enter Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+        <button type="submit">Get Itinerary</button>
+    </form>
+    <div id="itinerary" class="hidden">
+        <h2 style="text-align:center;">Itinerary</h2>
+        <div id="itineraryContent"></div>
     </div>
 
     <script src="script.js"></script>
