@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Advisor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(141, 206, 208);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center horizontally */
+            text-align: center; /* Center text */
+            margin-top: 20px; /* Add margin to top */
+        }
+
+        .header-container img {
+            max-width: 100px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header-container">
+        <img src="https://i.postimg.cc/GhVbh4jM/image.png" alt="left image of duck">
         <h1>Where Do You Want to Travel?</h1>
-        <form id="travelForm">
-            <label for="destination">Enter Destination:</label>
-            <input type="text" id="destination" name="destination" required>
-            <button type="submit">Get Itinerary</button>
-        </form>
-        <div id="itinerary" class="hidden">
-            <h2>Itinerary</h2>
-            <div id="itineraryContent"></div>
-        </div>
+        <img src="https://i.postimg.cc/y8RsJ7Q7/Untitled33-removebg-preview.png" alt="right image of duck">
+    </div>
+    <form id="travelForm" style="text-align: center;">
+        <label for="destination">Enter Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+        <button type="submit">Get Itinerary</button>
+    </form>
+    <div id="itinerary" class="hidden">
+        <h2 style="text-align:center;">Itinerary</h2>
+        <div id="itineraryContent"></div>
     </div>
 
     <script src="script.js"></script>
