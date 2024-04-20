@@ -21,6 +21,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         const attractions = data.data;
         const itineraryContent = document.getElementById("itineraryContent");
         itineraryContent.innerHTML = "";
@@ -28,7 +29,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             const attractionName = attraction.name;
             const attractionAddress = attraction.address;
             const attractionDescription = attraction.description;
-            const attractionPhotoURL = attraction.photo.images.original.url
+            const attractionPhotoURL = attraction.photo?.images?.original?.url;
 
             const attractionDiv = document.createElement("div")
             attractionDiv.classList.add('attraction')
@@ -44,7 +45,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             const descriptionElement = document.createElement("p")
             descriptionElement.classList.add("attraction-description")
             descriptionElement.textContent = attractionDescription
-
+            
             const imageElement = document.createElement("img")
             imageElement.classList.add("attraction-image")
             imageElement.src = attractionPhotoURL
@@ -52,7 +53,6 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             attractionDiv.appendChild(headerElement)
             attractionDiv.appendChild(addressElement)
             attractionDiv.appendChild(descriptionElement)
-            attractionDiv.appendChild(imageElement)
 
             itineraryContent.appendChild(attractionDiv)
         });
