@@ -34,14 +34,14 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-button {
+#submit-button {
     padding: 10px 20px;
     background-color: #2f84de;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button:hover {
@@ -96,4 +96,36 @@ button:hover {
 
 #loading-message {
     margin:auto;
+}
+
+#login-button{
+    float: right;
+    position: sticky;
+    padding: 10px 20px;
+    background-color: #2f84de;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#signup-button {
+    float: right;
+    position: sticky;
+    padding: 10px 20px;
+    background-color: #2f84de;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 0px;
 }
