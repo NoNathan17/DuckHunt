@@ -2,10 +2,14 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
     console.log("Request received")
     event.preventDefault();
     document.getElementById("topAttractions").classList.add("hidden")
-    document.getElementById("attractionsContent").classList.add("hidden")
+    document.getElementById("attractionsContent").innerHTML = ""
     document.getElementById("loading-message").classList.remove("hidden")
+    document.getElementById("no-attractions-message").classList.add("hidden");
 
+
+    const destinationInput = document.getElementById("destination");
     const destination = document.getElementById("destination").value;
+    destinationInput.value = "";
     fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${destination}&limit=30&offset=0&units=mi&location_id=1&currency=USD&sort=relevance&lang=en_US`, {
         "method": "GET",
         "headers": {
