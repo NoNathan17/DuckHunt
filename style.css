@@ -110,7 +110,7 @@ input[type="text"] {
     font-family: 'Trebuchet MS', sans-serif
 }
 
-#itineraryContent {
+#attractionsContent {
     margin-top: 20px;
     max-width: 100%;
     margin: auto;
@@ -118,7 +118,7 @@ input[type="text"] {
     column-gap: 20px;
 }
 
-#itineraryContent p {
+#attractionsContent p {
     margin-bottom: 10px;
 }
 
@@ -135,7 +135,7 @@ input[type="text"] {
     font-family: 'Trebuchet MS', sans-serif
 }
 
-.no-attractions {
+#no-attractions-message {
     margin: auto;
     font-family:'Trebuchet MS', sans-serif;
     font-weight: bold;
