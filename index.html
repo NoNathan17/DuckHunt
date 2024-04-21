@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Travel Advisor</title>
+    <title>City Attractions Finder</title>
     <link href="/Users/nathanong/Downloads/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://i.postimg.cc/y8RsJ7Q7/Untitled33-removebg-preview.png" type="image/png">
 </head>
 <body>
-    <div class = "container">
+<div class = "container">
     <div class="header-container">
         <img src="https://i.postimg.cc/GhVbh4jM/image.png" alt="left image of duck">
         <h1>Where Do You Want to Travel?</h1>
@@ -23,13 +23,10 @@
         <input type="text" id="destination" name="destination" placeholder="Ex. San Francisco" required>
         <button id="submit-button">Get Places</button>
     </form>
-    <div id="topAttractions" class="hidden">
-        <h2 style="text-align:center;">Top Attractions</h2>
-    </div>
 </div>
     <div id="attractionsContent" class="hidden"></div>
     <div id="loading-message" class="hidden">
-        <div>
+    <div>
         <h2>Loading Destination Request...</h2>
     </div>
     </div>
@@ -39,8 +36,16 @@
         <img src="https://media3.giphy.com/media/830H0uF08yM5J29qjf/giphy.gif?cid=6c09b95213c8wdo53i82ml8a4gxwyxxg2fo2l1e7fsn8lejr&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Confused Duck Gif">
         </div>
     </div>
-        
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('signup-button').addEventListener('click', function() {
+            window.location.href = 'signup.html';
+        });
+
+        document.getElementById('login-button').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
