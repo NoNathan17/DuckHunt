@@ -1,12 +1,29 @@
+
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: "Marker Felt", fantasy;
+    background-color: rgb(141, 206, 208);
+    margin: 0; 
+    padding: 0; 
+    background-image: url('https://i.postimg.cc/rm2bbjCg/Untitled35-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.header-container img {
+    max-width: 100px;
 }
 
 .container {
-    max-width: 1000px; /* Adjust max-width as needed */
+    max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -21,6 +38,32 @@ h1, h2 {
 form {
     text-align: center;
 }
+
+#login-button, #signup-button {
+    position: absolute;
+    float: right;
+    padding: 10px, 10px;
+    background-color: #2f84de;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 0;
+}
+
+#login-button {
+    right: 20px; 
+  }
+  
+  #signup-button {
+    right: 200px; 
+  }
 
 label {
     display: block;
@@ -45,9 +88,15 @@ input[type="text"] {
 
 }
 
-button:hover {
+#submit-button:hover, #login-button:hover, #signup-button:hover {
     background-color: #6faae9;
 }
+
+#submit-button:active, #login-button:active, #signup-button:active {
+    background-color: #6faae9;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .hidden {
     display: none;
@@ -103,33 +152,6 @@ button:hover {
 #loading-message {
     margin:auto;
 }
-    
-#login-button, #signup-button {
-    position: absolute;
-    float: right;
-    padding: 10px 20px;
-    background-color: #2f84de;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 150px;
-    height: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    top: 0;
-    font-size: 20px;
-    
-}
-
-#login-button {
-    right: 20px; 
-  }
-  
-  #signup-button {
-    right: 200px; 
-  }
 
 .loading-content {
     display: flex; /* Use flexbox for layout */
