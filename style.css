@@ -12,7 +12,6 @@ body {
 }
 
 .header-container {
-    position: relative;
     display: flex;
     justify-content: center; 
     text-align: center; 
@@ -23,15 +22,8 @@ body {
 
 .header-container img {
     max-width: 100px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 h1, h2 {
@@ -43,6 +35,7 @@ form {
 }
 
 #login-button, #signup-button {
+    float: right;
     padding: 10px, 10px;
     background-color: #2f84de;
     color: #fff;
@@ -53,7 +46,6 @@ form {
     font-size: 22px;
     width: 120px;
     height: 50px;
-    top: 0;
 }
 
 #login-button {
@@ -69,6 +61,7 @@ form {
 
 label {
     display: block;
+    font-size: 18px;
     margin-bottom: 10px;
     font-family:'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -80,6 +73,8 @@ input[type="text"] {
     padding: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+
 }
 
 #submit-button {
@@ -128,6 +123,8 @@ input[type="text"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 1650px;
+    margin: 0;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -170,14 +167,6 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 768px) {
-    .header-container {
-      margin-left: 20px; 
-    }
-  
-    .header-container img {
-      max-width: 80px; 
-    }
-  
     h1 {
       font-size: 24px;
     }
@@ -190,23 +179,6 @@ input[type="text"] {
       font-size: 18px; 
     }
 
-    form {
-      margin: 0 auto;
-      max-width: 80%; 
-    }
-  
-    input[type="text"] {
-      width: 100%; 
-    }
-  
-    #submit-button {
-      width: 100%; 
-    }
-  
-    .container {
-      padding: 10px;
-    }
-  
     .attraction {
       max-width: 100%; 
     }
