@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        <button id="home-button"> &lt;&lt; Home</button>
         <h2>Log In</h2>
         <form>
             <label for="login-username" class="form-label">Username:</label>
@@ -27,6 +28,10 @@
     <script src="script.js"></script>
     <script>
         document.getElementById('login-submit-button').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        
+        document.getElementById('home-button').addEventListener('click', function() {
             window.location.href = 'index.html';
         });
     </script>
