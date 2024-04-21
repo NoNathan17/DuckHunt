@@ -12,11 +12,13 @@ body {
 }
 
 .header-container {
+    margin-left: 500px;
     position: relative;
     display: flex;
     justify-content: center; 
     text-align: center; 
     margin-top: 20px; 
+    padding: 20px, 20px;
 }
 
 .header-container img {
@@ -41,8 +43,6 @@ form {
 }
 
 #login-button, #signup-button {
-    position: absolute;
-    float: right;
     padding: 10px, 10px;
     background-color: #2f84de;
     color: #fff;
@@ -53,16 +53,17 @@ form {
     font-size: 22px;
     width: 120px;
     height: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
     top: 0;
 }
 
 #login-button {
+    margin-left: 20px;
+    margin-right: 20px;
     right: 50px; 
   }
   
   #signup-button {
+    margin-left: 200px;
     right: 200px; 
   }
 
