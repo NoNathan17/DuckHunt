@@ -8,6 +8,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 20px;
 }
 
 .header-container {
@@ -50,7 +51,7 @@ form {
     cursor: pointer;
     font-family:'Trebuchet MS', sans-serif;
     font-size: 22px;
-    width: 150px;
+    width: 120px;
     height: 50px;
     margin-left: 20px;
     margin-right: 20px;
@@ -58,7 +59,7 @@ form {
 }
 
 #login-button {
-    right: 20px; 
+    right: 50px; 
   }
   
   #signup-button {
@@ -84,8 +85,7 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 #submit-button:hover, #login-button:hover, #signup-button:hover {
@@ -100,6 +100,10 @@ input[type="text"] {
 
 .hidden {
     display: none;
+}
+
+#itinerary {
+    font-family: 'Trebuchet MS', sans-serif
 }
 
 #itineraryContent {
@@ -124,6 +128,7 @@ input[type="text"] {
     margin-right: 20px;
     margin-bottom: 20px;
     break-inside: avoid;
+    font-family: 'Trebuchet MS', sans-serif
 }
 
 .attraction-name {
@@ -148,18 +153,6 @@ input[type="text"] {
     border-radius: 10px;
     margin-bottom: 10px;
 }
-
 #loading-message {
     margin:auto;
-}
-
-.loading-content {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    flex-direction: column; /* Align items in a column */
-}
-
-#loading-message h2 {
-    margin-bottom: 10px; /* Add spacing between text and image */
 }
