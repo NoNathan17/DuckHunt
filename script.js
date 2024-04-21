@@ -1,7 +1,7 @@
 document.getElementById("travelForm").addEventListener("submit", function(event) {
     console.log("Request received")
     event.preventDefault();
-    document.getElementById("itinerary").classList.add("hidden")
+    document.getElementById("topAttractions").classList.add("hidden")
     document.getElementById("itineraryContent").innerHTML = ""
     document.getElementById("loading-message").classList.remove("hidden")
 
@@ -12,7 +12,6 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             "X-RapidAPI-key": "f87fe54ac5msh3f62659484924a8p14a7e4jsnb2cc27d65afb",
             "X-RapidAPI-host": "travel-advisor.p.rapidapi.com"
         }
-        
     })
     .then(response => response.json())
     .then(data => {
@@ -36,6 +35,12 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
         console.log(data)
         const attractions = data.data.filter(item => item.name);
         const itineraryContent = document.getElementById("itineraryContent");
+
+        if (attractions.length > 1) {
+            const noAttractionsMessage = document.createElement("p")
+            noAttractionsMessage.textContent = "There are no attractions to display in this location.";
+            itineraryContent.appendChild(noAttractionsMessage);
+        } else {
         attractions.forEach(attraction => {
             const attractionName = attraction.name;
             const attractionAddress = attraction.address;
@@ -74,7 +79,8 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
 
             itineraryContent.appendChild(attractionDiv)
         });
-        document.getElementById("itinerary").classList.remove("hidden");
+    }
+        document.getElementById("topAttractions").classList.remove("hidden");
     })
     .catch(err => {
         console.error(err);
