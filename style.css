@@ -12,12 +12,12 @@ body {
 }
 
 .header-container {
-    margin-left: 500px;
     position: relative;
     display: flex;
     justify-content: center; 
     text-align: center; 
     margin-top: 20px; 
+    margin-right: -450px;
     padding: 20px, 20px;
 }
 
@@ -139,7 +139,7 @@ input[type="text"] {
     margin: auto;
     font-family:'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 25px;
 }
 
 .attraction-name {
@@ -168,3 +168,58 @@ input[type="text"] {
     margin:auto;
     font-family:'Trebuchet MS', sans-serif;
 }
+
+@media screen and (max-width: 768px) {
+    .header-container {
+      margin-left: 20px; 
+    }
+  
+    .header-container img {
+      max-width: 80px; 
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px; 
+    }
+  
+    h3 {
+      font-size: 18px; 
+    }
+
+    form {
+      margin: 0 auto;
+      max-width: 80%; 
+    }
+  
+    input[type="text"] {
+      width: 100%; 
+    }
+  
+    #submit-button {
+      width: 100%; 
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .attraction {
+      max-width: 100%; 
+    }
+  
+    #attractionsContent {
+      column-count: 1; 
+    }
+  
+    #loading-message {
+      font-size: 20px; 
+    }
+  
+    #no-attractions-message {
+      font-size: 30px; 
+    }
+  }
