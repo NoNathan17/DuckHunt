@@ -5,9 +5,10 @@ body {
     margin: 0; 
     padding: 0; 
     background-image: url('https://i.postimg.cc/rm2bbjCg/Untitled35-removebg-preview.png');
+    image-rendering: auto;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     margin-bottom: 20px;
 }
 
@@ -27,6 +28,7 @@ body {
 }
 
 h1, h2 {
+    align-content: center;
     text-align: center;
 }
 
@@ -74,7 +76,7 @@ input[type="text"] {
     margin-bottom: 20px;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', sans-serif;
-
+    border-radius: 5px;
 }
 
 #submit-button {
@@ -85,6 +87,8 @@ input[type="text"] {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Trebuchet MS', sans-serif;
+    margin-left: 5px;
+
 }
 
 #submit-button:hover, #login-button:hover, #signup-button:hover {
@@ -99,10 +103,6 @@ input[type="text"] {
 
 .hidden {
     display: none;
-}
-
-#topAttractions {
-    font-family: 'Trebuchet MS', sans-serif
 }
 
 #attractionsContent {
