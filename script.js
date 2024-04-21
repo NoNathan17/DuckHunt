@@ -34,10 +34,10 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
         console.log("Attraction Data fetched")
         console.log(data)
         const attractions = data.data.filter(item => item.name);
-        const attractionsContent = document.getElementById("attractionsContent");
+        const attractionsContent = document.getElementById("attractionsContent")
 
         if (attractions.length < 1) {
-            document.getElementById("no-attractions-message").classList.remove("hidden")
+            document.getElementById("no-attractions-message").classList.remove("hidden");
         } else {
         attractions.forEach(attraction => {
             const attractionName = attraction.name;
@@ -65,6 +65,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             attractionDiv.appendChild(descriptionElement)
 
             document.getElementById("topAttractions").classList.remove("hidden");
+            document.getElementById("attractionsContent").classList.remove("hidden")
 
             if (attractionPhotoURL) { 
                 const imageElement = document.createElement("img");
