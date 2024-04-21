@@ -36,7 +36,7 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
         const attractions = data.data.filter(item => item.name);
         const itineraryContent = document.getElementById("itineraryContent");
 
-        if (attractions.length > 1) {
+        if (attractions.length < 1) {
             const noAttractionsMessage = document.createElement("p")
             noAttractionsMessage.textContent = "There are no attractions to display in this location.";
             itineraryContent.appendChild(noAttractionsMessage);
