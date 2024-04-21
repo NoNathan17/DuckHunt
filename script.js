@@ -1,7 +1,6 @@
 document.getElementById("travelForm").addEventListener("submit", function(event) {
     console.log("Request received")
     event.preventDefault();
-    document.getElementById("topAttractions").classList.add("hidden")
     document.getElementById("attractionsContent").innerHTML = ""
     document.getElementById("loading-message").classList.remove("hidden")
     document.getElementById("no-attractions-message").classList.add("hidden");
@@ -68,7 +67,6 @@ document.getElementById("travelForm").addEventListener("submit", function(event)
             attractionDiv.appendChild(addressElement)
             attractionDiv.appendChild(descriptionElement)
 
-            document.getElementById("topAttractions").classList.remove("hidden");
             document.getElementById("attractionsContent").classList.remove("hidden")
 
             if (attractionPhotoURL) { 
